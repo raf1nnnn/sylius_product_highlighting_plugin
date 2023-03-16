@@ -1,5 +1,5 @@
 <div>
-{% for product in data %}
-   {{ product.name }} ,
-{% endfor %}
+    {% for product in data %}
+        <a href="{{ path('sylius_admin_product_show', {'id': product.id}) }}">{{ product.name }}</a>,
+    {% endfor %}
 </div>
