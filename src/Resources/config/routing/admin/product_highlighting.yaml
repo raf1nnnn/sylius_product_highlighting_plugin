@@ -1,0 +1,19 @@
+dotit_sylius_highlighting_plugin_admin_product_highlighting:
+  resource: |
+    alias: dotit_sylius_highlighting_plugin.product_highlighting
+    section: admin
+    templates: "@SyliusAdmin/Crud"
+    except: ['show']
+    redirect: index
+    grid: dotit_sylius_highlighting_plugin_admin_product_highlighting
+    permission: true
+    vars:
+        all:
+            subheader: dotit_sylius_highlighting_plugin.ui.manage_product_highlighting
+            templates:
+                form: '@DotitSyliusHighlightingPlugin/Admin/product_highlighting/_form.html.twig'
+        index:
+            icon: trademark
+  type: sylius.resource
+
+

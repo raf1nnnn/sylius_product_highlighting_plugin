@@ -1,0 +1,22 @@
+dotit_sylius_store_plugin:
+    ui:
+        store: Vendedor
+        stores: Vendedores
+        edit_store: Editar vendedor
+        new_store: Nuevo vendedor
+        profile: Perfil
+        manage_stores: Administrar vendedores
+    menu:
+        admin:
+            stores: Vendedores
+    form:
+        product:
+            select_store: Selecciona vendedor
+        store:
+            slug: Slug
+            email: Email
+            translations: Traducciones
+            description: Descripción
+            logo: Logo
+            channels: Tiendas
+            extra_emails: Emails extra

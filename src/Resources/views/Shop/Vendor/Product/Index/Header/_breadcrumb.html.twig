@@ -1,0 +1,11 @@
+<div class="ui breadcrumb">
+    <a href="{{ path('sylius_shop_homepage') }}" class="section">{{ 'sylius.ui.home'|trans }}</a>
+    <div class="divider"> / </div>
+    <a href="{{ path('dotit_sylius_highlighting_plugin_shop_product_highlighting_index') }}" class="section">
+        {{ 'dotit_sylius_highlighting_plugin.ui.product_highlightings'|trans }}
+    </a>
+    <div class="divider"> / </div>
+    <div class="active section">
+        {{ product_highlighting.name }}
+    </div>
+</div>

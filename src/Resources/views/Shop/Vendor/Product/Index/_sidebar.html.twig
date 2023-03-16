@@ -1,0 +1,4 @@
+{{ render(url('dotit_sylius_highlighting_plugin_shop_partial_product_highlighting_show_by_slug', {
+    'slug': app.request.attributes.get('slug'),
+    'template': '@DotitSyliusHighlightingPlugin/Shop/product_highlighting/_verticalMenu.html.twig'
+})) }}

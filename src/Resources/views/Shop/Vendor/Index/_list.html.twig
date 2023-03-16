@@ -1,0 +1,21 @@
+{% import '@SyliusUi/Macro/messages.html.twig' as messages %}
+{% import '@SyliusUi/Macro/pagination.html.twig' as pagination %}
+
+{{ sylius_template_event('dotit_sylius_highlighting_plugin.shop.product_highlighting.index.search', _context) }}
+
+<div class="ui clearing hidden divider"></div>
+
+{{ sylius_template_event('dotit_sylius_highlighting_plugin.shop.product_highlighting.index.before_list', {'product_highlightings': resources.data}) }}
+
+{% if resources.data|length > 0 %}
+    <div class="ui doubling six column grid" id="product_highlightings" {{ sylius_test_html_attribute('product_highlightings') }}>
+        {% include '@DotitSyliusHighlightingPlugin/Shop/product_highlighting/_product_highlightings.html.twig' with {'product_highlightings': resources.data} only %}
+    </div>
+    <div class="ui hidden divider"></div>
+
+    {{ sylius_template_event('dotit_sylius_highlighting_plugin.shop.product_highlighting.index.before_pagination', {'product_highlightings': resources.data}) }}
+
+    {{ pagination.simple(resources.data) }}
+{% else %}
+    {{ messages.info('sylius.ui.no_results_to_display') }}
+{% endif %}

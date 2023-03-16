@@ -1,0 +1,9 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block title %}{{ 'dotit_sylius_highlighting_plugin.ui.product_highlightings'|trans }} | {{ parent() }}{% endblock %}
+
+{% block content %}
+    {{ sylius_template_event('dotit_sylius_highlighting_plugin.shop.product_highlighting.index.header', _context) }}
+
+    {{ sylius_template_event('dotit_sylius_highlighting_plugin.shop.product_highlighting.index.list', _context) }}
+{% endblock %}

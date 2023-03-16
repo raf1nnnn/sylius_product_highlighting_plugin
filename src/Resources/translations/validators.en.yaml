@@ -1,0 +1,18 @@
+dotit_sylius_highlighting_plugin:
+    product_highlighting:
+        slug:
+            unique: There is an existing product highlight with this slug.
+            not_blank: Slug cannot be blank.
+            min_length: Slug must be at least {{ limit }} characters long.
+            max_length: Slug can not be longer than {{ limit }} characters.
+        name:
+            unique: There is an existing product highlight with this name.
+            not_blank: Name cannot be blank.
+            min_length: Name must be at least {{ limit }} characters long.
+            max_length: Name can not be longer than {{ limit }} characters.
+
+        description:
+            unique: There is an existing product highlight with this name.
+            not_blank: Description cannot be blank.
+            min_length: Description must be at least {{ limit }} characters long.
+            max_length: Description can not be longer than {{ limit }} characters.

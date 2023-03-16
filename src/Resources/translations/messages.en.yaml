@@ -1,0 +1,25 @@
+dotit_sylius_highlighting_plugin:
+    ui:
+        product_highlightings: Product Highlight
+        products_highlighting: Product Highlight
+        products: Products
+        edit_product_highlighting: Edit Product Highlight
+        new_product_highlighting: New Product Highlight
+        profile: Profile
+        manage_product_highlighting: Manage Product Highlight
+    menu:
+        admin:
+            products_highlighting: Product Highlight
+    form:
+        product:
+            select_store: Select store
+        store:
+            slug: Slug
+            email: Email
+            translations: Translations
+            description: Description
+            logo: Logo
+            channels: Channels
+            extra_emails: Extra emails
+
+

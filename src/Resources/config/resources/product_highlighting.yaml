@@ -1,0 +1,10 @@
+sylius_resource:
+    resources:
+        dotit_sylius_highlighting_plugin.product_highlighting:
+            driver: doctrine/orm
+            classes:
+                model: Dotit\SyliusHighlightingPlugin\Entity\ProductHighlighting
+                interface: Dotit\SyliusHighlightingPlugin\Entity\ProductHighlightingInterface
+                factory: Sylius\Component\Resource\Factory\Factory
+                form: Dotit\SyliusHighlightingPlugin\Form\Type\ProductHighlightingType
+

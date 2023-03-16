@@ -1,0 +1,9 @@
+services:
+
+  dotit_sylius_highlighting_plugin.form.type.product_highlighting:
+    class: Dotit\SyliusHighlightingPlugin\Form\Type\ProductHighlightingTypeProductHighlightingType
+    arguments:
+      - '%dotit_sylius_highlighting_plugin.model.product_highlighting.class%'
+      - ['dotit']
+    tags:
+      - { name: form.type, alias: odiseo_sylius_vendor }

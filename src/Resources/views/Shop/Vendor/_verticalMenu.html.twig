@@ -1,0 +1,15 @@
+{{ sylius_template_event('dotit_sylius_highlighting_plugin.shop.product_highlighting.product.index.before_vertical_menu', {'product_highlighting': product_highlighting}) }}
+
+<img class="ui medium circular image" src="{{ product_highlighting.logoName|imagine_filter('dotit_sylius_highlighting_plugin_logo') }}" alt="{{ product_highlighting.name }}">
+<div class="ui hidden divider"></div>
+
+{{ sylius_template_event('dotit_sylius_highlighting_plugin.shop.product_highlighting.product.index.after_logo', {'product_highlighting': product_highlighting}) }}
+
+<h1 class="ui header">
+    <span {{ sylius_test_html_attribute('product_highlighting-name') }}>{{ product_highlighting.name }}</span>
+    <div class="sub header">
+        {{ product_highlighting.description }}
+    </div>
+</h1>
+
+{{ sylius_template_event('dotit_sylius_highlighting_plugin.shop.product_highlighting.product.index.after_vertical_menu', {'product_highlighting': product_highlighting}) }}

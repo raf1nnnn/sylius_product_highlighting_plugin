@@ -1,0 +1,6 @@
+services:
+  dotit_sylius_highlighting_plugin.controller.product_highlighting_slug:
+    class: Dotit\SyliusHighlightingPlugin\Controller\ProductHighlightSlugController
+    public: true
+    arguments:
+      - '@sylius.generator.slug'

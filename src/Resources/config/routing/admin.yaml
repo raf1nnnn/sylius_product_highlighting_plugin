@@ -1,0 +1,6 @@
+dotit_sylius_highlighting_plugin_admin_product_highlighting:
+  resource: admin/product_highlighting.yaml
+
+dotit_sylius_highlighting_plugin_admin_ajax:
+  resource: admin/ajax.yaml
+  prefix: /ajax

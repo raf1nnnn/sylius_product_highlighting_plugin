@@ -1,0 +1,17 @@
+dotit_sylius_highlighting_plugin_admin_ajax_product_highlighting:
+  resource: ajax/product_highlighting.yaml
+  prefix: /products-highlighting
+sylius_admin_ajax_customer_by_name_phrase:
+  path: /admin/product/search
+  methods: [GET]
+  defaults:
+    _controller: sylius.controller.product::indexAction
+    _format: json
+    _sylius:
+      serialization_groups: [Default]
+      permission: true
+      repository:
+        method: findByNamePart
+        arguments:
+          phrase: $phrase
+          limit: 25

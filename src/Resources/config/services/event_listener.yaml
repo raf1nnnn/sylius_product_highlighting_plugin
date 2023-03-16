@@ -1,0 +1,18 @@
+services:
+  dotit_sylius_highlighting_plugin.event_listener.admin.menu_builder:
+    class: Dotit\SyliusHighlightingPlugin\Menu\AdminMenuListener
+    tags:
+      - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+
+  dotit_sylius_highlighting_plugin.menu_builder.admin.product_highlighting_form:
+    class: Dotit\SyliusHighlightingPlugin\Menu\ProductHighlightingFormMenuBuilder
+    arguments:
+      - '@knp_menu.factory'
+      - '@event_dispatcher'
+    tags:
+      - { name: knp_menu.menu_builder, method: createMenu, alias: dotit_sylius_highlighting_plugin.admin.product_highlighting_form }
+
+  dotit_sylius_highlighting_plugin.block_event_listener.layout.product_highlighting.javascripts:
+    class: Dotit\SyliusHighlightingPlugin\Block\ProductHighlightingJsBlockListener
+    tags:
+      - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.layout.javascripts, method: onBlockEvent }

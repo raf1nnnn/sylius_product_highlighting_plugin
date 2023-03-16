@@ -1,0 +1,4 @@
+imports:
+  - { resource: grids/admin/product_highlighting.yaml }
+
+

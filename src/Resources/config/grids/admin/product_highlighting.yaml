@@ -1,0 +1,53 @@
+sylius_grid:
+  templates:
+  grids:
+    dotit_sylius_highlighting_plugin_admin_product_highlighting:
+      driver:
+        name: doctrine/orm
+        options:
+          class: "%dotit_sylius_highlighting_plugin.model.product_highlighting.class%"
+      sorting:
+      fields:
+        name:
+          type: string
+          label: sylius.ui.name
+          sortable: ~
+        enabled:
+          type: twig
+          label: sylius.ui.enabled
+          sortable: ~
+          options:
+            template: "@SyliusUi/Grid/Field/enabled.html.twig"
+        products:
+          type: twig
+          label: dotit_sylius_highlighting_plugin.ui.products
+          sortable: ~
+          options:
+            template: "@DotitSyliusHighlightingPlugin/Grid/Field/products.html.twig"
+        createdAt:
+          type: datetime
+          label: sylius.ui.creation_date
+          sortable: ~
+          options:
+            format: d-m-Y H:i
+      filters:
+        name:
+          type: string
+          label: sylius.ui.name
+        enabled:
+          type: boolean
+          label: sylius.ui.enabled
+        createdAt:
+          type: date
+          label: sylius.ui.creation_date
+      actions:
+        main:
+          create:
+            type: create
+
+        item:
+          update:
+            type: update
+          delete:
+            type: delete
+

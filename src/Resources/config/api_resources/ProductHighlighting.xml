@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+
+<resources xmlns="https://api-platform.com/schema/metadata"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="https://api-platform.com/schema/metadata https://api-platform.com/schema/metadata/metadata-2.0.xsd"
+>
+    <resource class="%dotit_sylius_highlighting_plugin.model.product_highlighting.class%" shortName="ProductsHighlight">
+        <attribute name="validation_groups">odiseo</attribute>
+
+        <collectionOperations>
+
+            <collectionOperation name="shop_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/shop/products-highlight</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">shop:product:read</attribute>
+                </attribute>
+            </collectionOperation>
+        </collectionOperations>
+
+        <itemOperations>
+
+            <itemOperation name="shop_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/shop/product-highlight/{slug}</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">shop:product:read</attribute>
+                </attribute>
+            </itemOperation>
+        </itemOperations>
+
+        <property name="id" identifier="false" writable="false"/>
+        <property name="slug" identifier="true" required="true"/>
+        <property name="name" required="true"/>
+        <property name="description" required="true"/>
+        <property name="enabled" readable="true" writable="true"/>
+        <property name="products" required="true"/>
+        <property name="createdAt" writable="false"/>
+        <property name="updatedAt" writable="false"/>
+    </resource>
+</resources>

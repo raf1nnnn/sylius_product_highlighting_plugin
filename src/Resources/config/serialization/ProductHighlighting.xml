@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Dotit\SyliusHighlightingPlugin\Entity\ProductHighlighting">
+        <attribute name="id">
+            <group>admin:product:read</group>
+            <group>shop:product:read</group>
+        </attribute>
+        <attribute name="slug">
+            <group>admin:product:create</group>
+            <group>admin:product:read</group>
+            <group>admin:product:update</group>
+            <group>shop:product:read</group>
+        </attribute>
+        <attribute name="name">
+            <group>admin:product:create</group>
+            <group>admin:product:read</group>
+            <group>admin:product:update</group>
+            <group>shop:product:read</group>
+        </attribute>
+        <attribute name="enabled">
+            <group>admin:product:create</group>
+            <group>admin:product:read</group>
+            <group>admin:product:update</group>
+            <group>shop:product:read</group>
+        </attribute>
+        <attribute name="description">
+            <group>admin:product:create</group>
+            <group>admin:product:read</group>
+            <group>admin:product:update</group>
+            <group>shop:product:read</group>
+        </attribute>
+        <attribute name="products">
+            <group>admin:product:read</group>
+            <group>shop:product:read</group>
+        </attribute>
+
+        <attribute name="createdAt">
+            <group>admin:product:read</group>
+            <group>shop:product:read</group>
+        </attribute>
+        <attribute name="updatedAt">
+            <group>admin:product:read</group>
+            <group>shop:product:read</group>
+        </attribute>
+    </class>
+</serializer>

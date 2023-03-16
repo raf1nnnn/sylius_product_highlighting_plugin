@@ -1,0 +1,2 @@
+{% set menu = knp_menu_get('dotit_sylius_highlighting_plugin.admin.product_highlighting_form', [], {'product_highlighting': product_highlighting}) %}
+{{ knp_menu_render(menu, {'template': '@DotitSyliusHighlightingPlugin/Admin/product_highlighting/_menu.html.twig', 'form': form, 'product_highlighting': product_highlighting}) }}

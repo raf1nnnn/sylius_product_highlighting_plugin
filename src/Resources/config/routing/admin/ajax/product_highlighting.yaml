@@ -1,0 +1,6 @@
+dotit_sylius_highlighting_plugin_admin_ajax_product_highlighting_generate_slug:
+  path: /generate-slug
+  methods: [GET]
+  defaults:
+    _controller: dotit_sylius_highlighting_plugin.controller.product_highlighting_slug::generate
+    _format: json
