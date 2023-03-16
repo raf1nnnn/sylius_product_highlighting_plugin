@@ -20,16 +20,6 @@ Dotit\SyliusHighlightingPlugin\Entity\ProductHighlighting:
           minMessage: 'dotit_sylius_highlighting_plugin.product_highlighting.name.min_length'
           maxMessage: 'dotit_sylius_highlighting_plugin.product_highlighting.name.max_length'
           groups: ['dotit_product']
-    description:
-      - NotBlank:
-          message: 'dotit_sylius_highlighting_plugin.product_highlighting.description.not_blank'
-          groups: [ 'dotit_product' ]
-      - Length:
-          min: 2
-          max: 250
-          minMessage: 'dotit_sylius_highlighting_plugin.product_highlighting.description.min_length'
-          maxMessage: 'dotit_sylius_highlighting_plugin.product_highlighting.description.max_length'
-          groups: [ 'dotit_product' ]
 
     slug:
       - NotBlank:

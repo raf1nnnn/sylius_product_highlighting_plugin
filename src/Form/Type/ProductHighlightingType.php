@@ -70,7 +70,7 @@ class ProductHighlightingType extends AbstractResourceType
                 if ($productHighlight) {
                     $products = $productHighlight->getProducts();
                     if (sizeof($products) < 4) {
-                        $form->get('products')->addError(new FormError('Min selected products is 3'));
+                        $form->get('products')->addError(new FormError('Min selected products is 4'));
 
                     } elseif (sizeof($products) > 20) {
                         $form->get('products')->addError(new FormError('Max selected products is 20'));
