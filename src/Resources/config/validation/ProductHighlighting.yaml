@@ -8,6 +8,10 @@ Dotit\SyliusHighlightingPlugin\Entity\ProductHighlighting:
         fields: [slug]
         message: 'dotit_sylius_highlighting_plugin.product_highlighting.slug.unique'
         groups: ['dotit_product']
+    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+        fields: [ position ]
+        message: 'dotit_sylius_highlighting_plugin.product_highlighting.position.unique'
+        groups: [ 'dotit_product' ]
 
   properties:
     name:
@@ -31,6 +35,7 @@ Dotit\SyliusHighlightingPlugin\Entity\ProductHighlighting:
           minMessage: 'dotit_sylius_highlighting_plugin.product_highlighting.slug.min_length'
           maxMessage: 'dotit_sylius_highlighting_plugin.product_highlighting.slug.max_length'
           groups: ['dotit_product']
-
-
-
+    position:
+      - NotBlank:
+          message: 'dotit_sylius_highlighting_plugin.product_highlighting.position.not_blank'
+          groups: [ 'dotit_product' ]

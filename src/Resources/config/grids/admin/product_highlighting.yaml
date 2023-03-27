@@ -30,6 +30,10 @@ sylius_grid:
           sortable: ~
           options:
             format: d-m-Y H:i
+        position:
+          type: string
+          label: Position
+          sortable: ~
       filters:
         name:
           type: string

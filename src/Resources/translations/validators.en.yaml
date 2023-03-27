@@ -16,3 +16,7 @@ dotit_sylius_highlighting_plugin:
             not_blank: Description cannot be blank.
             min_length: Description must be at least {{ limit }} characters long.
             max_length: Description can not be longer than {{ limit }} characters.
+        position:
+            unique: There is an existing product highlight with this position.
+            not_blank: Position cannot be blank.
+

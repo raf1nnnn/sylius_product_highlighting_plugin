@@ -32,6 +32,7 @@
         <property name="id" identifier="false" writable="false"/>
         <property name="slug" identifier="true" required="true"/>
         <property name="name" required="true"/>
+        <property name="position" required="true"/>
         <property name="description" required="true"/>
         <property name="enabled" readable="true" writable="true"/>
         <property name="products" required="true"/>

@@ -6,6 +6,7 @@ dotit_sylius_highlighting_plugin:
         edit_product_highlighting: Edit Product Highlight
         new_product_highlighting: New Product Highlight
         profile: Profile
+        position: Position
         manage_product_highlighting: Manage Product Highlight
     menu:
         admin:
@@ -21,5 +22,5 @@ dotit_sylius_highlighting_plugin:
             logo: Logo
             channels: Channels
             extra_emails: Extra emails
-
+            position: Position
 

@@ -24,6 +24,7 @@
         <field name="name" type="string" unique="true"/>
         <field name="slug" type="string" unique="true"/>
         <field name="description" type="string" nullable="true" unique="false"/>
+        <field name="position" type="integer" nullable="true" unique="true"/>
         <field name="enabled" type="boolean"/>
 
         <field name="createdAt" type="datetime" column="created_at">

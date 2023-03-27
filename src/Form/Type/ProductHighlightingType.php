@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -36,6 +37,9 @@ class ProductHighlightingType extends AbstractResourceType
         $builder
             ->add('name', TextType::class, [
                 'label' => 'sylius.ui.name',
+            ])
+            ->add('position', IntegerType::class, [
+                'label' => 'Position',
             ])
             ->add('slug', TextType::class, [
                 'label' => 'dotit_sylius_appearance_plugin.form.store.slug',

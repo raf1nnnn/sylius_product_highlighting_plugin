@@ -21,6 +21,12 @@
             <group>admin:product:update</group>
             <group>shop:product:read</group>
         </attribute>
+        <attribute name="position">
+            <group>admin:product:create</group>
+            <group>admin:product:read</group>
+            <group>admin:product:update</group>
+            <group>shop:product:read</group>
+        </attribute>
         <attribute name="enabled">
             <group>admin:product:create</group>
             <group>admin:product:read</group>

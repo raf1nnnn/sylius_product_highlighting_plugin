@@ -24,6 +24,7 @@ class ProductHighlighting implements ProductHighlightingInterface
     protected ?string $name = null;
     protected ?string $slug = null;
     protected ?string $description = null;
+    protected ?int $position = null;
 
 
     /**
@@ -101,6 +102,16 @@ class ProductHighlighting implements ProductHighlightingInterface
         if ($this->hasProduct($product)) {
             $this->products->removeElement($product);
         }
+    }
+
+    public function setPosition(int $position)
+    {
+        $this->position = $position;
+    }
+
+    public function getPosition():?int
+    {
+        return $this->position;
     }
 
 
