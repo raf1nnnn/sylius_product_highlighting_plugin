@@ -12,6 +12,9 @@
             <collectionOperation name="shop_get">
                 <attribute name="method">GET</attribute>
                 <attribute name="path">/shop/products-highlight</attribute>
+                <attribute name="filters">
+                    <attribute>product_highlighting.boolean_filter</attribute>
+                </attribute>
                 <attribute name="normalization_context">
                     <attribute name="groups">shop:product:read</attribute>
                 </attribute>
