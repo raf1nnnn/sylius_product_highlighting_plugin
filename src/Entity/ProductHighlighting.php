@@ -32,6 +32,7 @@ class ProductHighlighting implements ProductHighlightingInterface
      */
     protected Collection $products;
 
+    private Collection $activeProducts;
 
     public function __construct()
     {
@@ -82,6 +83,12 @@ class ProductHighlighting implements ProductHighlightingInterface
     public function getProducts(): Collection
     {
         return $this->products;
+    }
+    public function getActiveProducts(): Collection
+    {
+       return  $this->products->filter(function($product) {
+            return $product->isEnabled() === TRUE;
+        });
     }
 
 
