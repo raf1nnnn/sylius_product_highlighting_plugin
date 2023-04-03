@@ -84,11 +84,20 @@ class ProductHighlighting implements ProductHighlightingInterface
     {
         return $this->products;
     }
-    public function getActiveProducts(): Collection
+
+    public function getActiveProducts(): array
     {
-       return  $this->products->filter(function($product) {
-            return $product->isEnabled() === TRUE;
-        });
+        $activeProducts = [];
+
+        foreach ($this->products as $product) {
+            if ($product->isEnabled()) {
+                $activeProducts[] = $product;
+            }else
+            continue;
+        }
+
+        return $activeProducts;
+
     }
 
 
@@ -116,7 +125,7 @@ class ProductHighlighting implements ProductHighlightingInterface
         $this->position = $position;
     }
 
-    public function getPosition():?int
+    public function getPosition(): ?int
     {
         return $this->position;
     }
